@@ -1,14 +1,11 @@
 from determinist import *
+from randomWS import *
 
 print("coucou")
 
-test = WeakSchur([[1],[2,3,6]])
-test.display()
-test.save("yop")
-test.vals=[[]]
-test.display()
-print("load")
-test.load("yop")
-test.display()
-test.verify()
 
+ws = multiRand(4,10000)
+
+ws.display()
+ws.updateBest()
+print(ws.getMax())
