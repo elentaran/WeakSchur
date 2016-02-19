@@ -77,6 +77,12 @@ class WeakSchur:
                     return False
         return True
 
+    def addVerifyRange(self,elem,rangeBin):
+        for i in rangeBin:
+            if not(addVerify(elem,i)):
+                return False
+        return True
+
     def getMax(self):
         res=[]
         for oneBin in self.vals:
